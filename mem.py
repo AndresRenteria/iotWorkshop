@@ -7,6 +7,7 @@ button = grove.GroveButton(4)
 while 1:
     print button.name(), ' value is ', button.value()
     time.sleep(1)
+    
 buzzer = upmBuzzer.Buzzer(5)
 
 chords = [upmBuzzer.DO, upmBuzzer.RE, upmBuzzer.MI, upmBuzzer.FA, 
@@ -23,9 +24,6 @@ if(button.value() == 1){
     	print buzzer.playSound(chords[chord_ind], 1000000)
     	time.sleep(0.1)
     }
-
-print "exiting application"
-
 
 del button
 del buzzer
